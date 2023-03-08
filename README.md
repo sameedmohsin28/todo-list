@@ -59,7 +59,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Coming Soon]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,7 +77,9 @@ Install this project with WinRar.
 
 ### Usage
 
-To run the project, use VS Code Live Server plugin.
+Run
+- npm install
+- npm run start
 
 ### Run tests
 
