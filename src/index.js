@@ -4,10 +4,8 @@ import enterIcon from './assets/enter.png';
 import binIcon from './assets/removeIcon.png';
 
 import Tasks from './modules/Tasks.js';
-import { addItem, toDoList } from './modules/addItem.js';
-import { clearDone } from './modules/checkAndClear.js';
-// import checkingItems from './modules/checkAndClear.js';
-// eslint-disable-next-line no-unused-vars
+import { addItem, toDoList, clearDone } from './modules/addItem.js';
+import checkingItems from './modules/itemCheck.js';
 import removeItem from './modules/removeItem.js';
 
 const dataEnter = document.querySelector('.subBtn');
@@ -20,8 +18,6 @@ const listContainer = document.querySelector('.todo-list');
 if (getItemsfromLocal != null) {
   listContainer.textContent = '';
   getItemsfromLocal.forEach((anItem) => {
-    // const funcParam = anItem.index
-
     const itemContainer = document.createElement('div');
     itemContainer.classList.add('item-container');
     itemContainer.setAttribute('id', anItem.index);
@@ -30,13 +26,11 @@ if (getItemsfromLocal != null) {
     itemCheck.classList.add('item-check');
     itemCheck.setAttribute('type', 'checkbox');
     itemCheck.checked = anItem.completed;
-    // eslint-disable-next-line no-undef
     itemCheck.onclick = () => checkingItems(anItem.index);
 
     const itemName = document.createElement('div');
     itemName.classList.add('item-name');
-    // eslint-disable-next-line no-undef
-    itemName.onclick = () => editData(anItem.index);
+    itemName.onclick = () => window.editData(anItem.index);
     itemName.textContent = anItem.description;
 
     const remvButton = document.createElement('button');

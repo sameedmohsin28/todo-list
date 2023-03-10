@@ -22,9 +22,18 @@ const addItem = () => {
 window.editData = (rid) => {
   id = rid;
   const arr1 = JSON.parse(localStorage.getItem('localStorageTasks'));
-  itemInput.value = arr1[rid - 1].description;
+  itemInput.value = arr1[id - 1].description;
+};
+
+const clearDone = () => {
+  const afterClearArray = toDoList.filter((eachItem) => eachItem.completed !== true);
+  for (let i = 0; i < afterClearArray.length; i += 1) {
+    afterClearArray[i].index = i + 1;
+  }
+  localStorage.setItem('localStorageTasks', JSON.stringify(afterClearArray));
+  window.location.reload();
 };
 
 export {
-  id, toDoList, itemInput, addItem,
+  id, toDoList, itemInput, addItem, clearDone,
 };
