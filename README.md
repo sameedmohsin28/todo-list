@@ -59,7 +59,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Coming Soon]()
+- [Live Demo](https://sameedmohsin28.github.io/todo-list/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
